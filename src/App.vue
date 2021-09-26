@@ -1,6 +1,6 @@
 <template>
   <h1>{{ title }}</h1>
-  <Modal header="Sign up for the Giveaway!" text="Pathum props" />
+  <Modal :header="header" :text="text" theme="sale" />
   <input type="text" ref="name" />
   <button @click="handleClick">Click me</button>
 </template>
@@ -14,6 +14,8 @@ export default {
   data() {
     return {
       title: "My first Vue App :)",
+      header: "Sign up for the Giveaway!",
+      text: "Grab your ninja swag for half price!",
     };
   },
   methods: {
